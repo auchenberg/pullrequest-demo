@@ -4,7 +4,7 @@
  * Module dependencies.
  */
 
-var app = require('../app');
+var app = require('../index');
 var debug = require('debug')('r3pi-shopping-cart:server');
 var http = require('http');
 
