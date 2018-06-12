@@ -1,5 +1,6 @@
 var express = require('express');
 var router = express.Router();
+var logger = require('morgan');
 
 var fs = require('fs');
 
@@ -7,8 +8,6 @@ var Cart = require('../models/cart');
 var products = JSON.parse(fs.readFileSync('./data/products.json', 'utf8'));
 
 router.get('/', function (req, res, next) {
-  var productId = products && products[0].id;
-
   res.render('index', 
   { 
     title: 'NodeJS Shopping Cart',
