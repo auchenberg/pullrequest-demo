@@ -20,7 +20,7 @@ router.get('/add/:id', function(req, res, _next) {
   var productId = req.params.id;
   var cart = new Cart(req.session.cart ? req.session.cart : {});
   var product = products.filter(function(item) {
-    return item.id == productId;
+    return item.id === productId;
   });
   cart.add(product[0], productId);
   req.session.cart = cart;

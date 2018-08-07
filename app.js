@@ -27,7 +27,7 @@ app.use(session({
   secret: 'secret',
   resave: false,
   saveUninitialized: true
-}))
+}));
 app.use(express.static(path.join(__dirname, 'public')));
 
 // res.locals is an object passed to hbs engine
