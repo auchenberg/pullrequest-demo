@@ -14,7 +14,7 @@
   {
     "id": 3,
     "title": "Garlic",
-    "description": "Garlic are <span class=\"label label-info\">15 CHF each</span>",
+    "description": "Garlic is <span class=\"label label-info\">15 CHF each</span>",
     "price": 15
   },
   {
