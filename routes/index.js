@@ -6,9 +6,7 @@ var fs = require('fs');
 var Cart = require('../models/cart');
 var products = JSON.parse(fs.readFileSync('./data/products.json', 'utf8'));
 
-router.get('/', function (req, res, next) {
-  var productId = products && products[0].id;
-
+router.get('/', function (_req, res, _next) {
   res.render('index', 
   { 
     title: 'NodeJS Shopping Cart',
@@ -17,12 +15,12 @@ router.get('/', function (req, res, next) {
   );
 });
 
-router.get('/add/:id', function(req, res, next) {
+router.get('/add/:id', function(req, res, _next) {
 
   var productId = req.params.id;
   var cart = new Cart(req.session.cart ? req.session.cart : {});
   var product = products.filter(function(item) {
-    return item.id == productId;
+    return item.id === productId;
   });
   cart.add(product[0], productId);
   req.session.cart = cart;
@@ -30,7 +28,7 @@ router.get('/add/:id', function(req, res, next) {
   inline();
 });
 
-router.get('/cart', function(req, res, next) {
+router.get('/cart', function(req, res, _next) {
   if (!req.session.cart) {
     return res.render('cart', {
       products: null
@@ -44,7 +42,7 @@ router.get('/cart', function(req, res, next) {
   });
 });
 
-router.get('/remove/:id', function(req, res, next) {
+router.get('/remove/:id', function(req, res, _next) {
   var productId = req.params.id;
   var cart = new Cart(req.session.cart ? req.session.cart : {});
 

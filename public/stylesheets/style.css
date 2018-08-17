@@ -16,10 +16,12 @@ a {
 .dropdown-menu .cart {
   min-width: 250px;
   padding: 15px 25px 0;
+  margin: 0;
 }
 
 .dropdown-menu .cart .row > div {
   padding: 0 0 10px 0;
+  margin: 0;
 }
 
 .dropdown-menu .cart .totalPrice{
