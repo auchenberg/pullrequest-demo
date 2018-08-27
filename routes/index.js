@@ -11,7 +11,7 @@ router.get('/', function (req, res, next) {
 
   res.render('index', 
   { 
-    title: 'NodeJS Shopping Cart',
+    title: 'Shopping Cart',
     products: products
   }
   );
@@ -38,7 +38,7 @@ router.get('/cart', function(req, res, next) {
   }
   var cart = new Cart(req.session.cart);
   res.render('cart', {
-    title: 'NodeJS Shopping Cart',
+    title: 'Shopping Cart',
     products: cart.getItems(),
     totalPrice: cart.totalPrice
   });
