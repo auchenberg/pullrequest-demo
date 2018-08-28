@@ -4,22 +4,22 @@
  * Module dependencies.
  */
 
-var app = require('../index');
+import app, { set } from '../index';
 var debug = require('debug')('r3pi-shopping-cart:server');
-var http = require('http');
+import { createServer } from 'http';
 
 /**
  * Get port from environment and store in Express.
  */
 
 var port = normalizePort(process.env.PORT || '3000');
-app.set('port', port);
+set('port', port);
 
 /**
  * Create HTTP server.
  */
 
-var server = http.createServer(app);
+var server = createServer(app);
 
 /**
  * Listen on provided port, on all network interfaces.

@@ -1,10 +1,10 @@
-var express = require('express');
-var router = express.Router();
+import { Router } from 'express';
+var router = Router();
 
-var fs = require('fs');
+import { readFileSync } from 'fs';
 
-var Cart = require('../models/cart');
-var products = JSON.parse(fs.readFileSync('./data/products.json', 'utf8'));
+import Cart from '../models/cart';
+var products = JSON.parse(readFileSync('./data/products.json', 'utf8'));
 
 router.get('/', function (_req, res, _next) {
   res.render('index', 
@@ -51,4 +51,4 @@ router.get('/remove/:id', function(req, res, _next) {
   res.redirect('/cart');
 });
 
-module.exports = router;
+export default router;
