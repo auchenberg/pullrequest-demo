@@ -21,7 +21,7 @@ a {
 
 .dropdown-menu .cart .row > div {
   padding: 0 0 10px 0;
-  margin: 10px;
+  margin: 0;
 }
 
 .dropdown-menu .cart .totalPrice{
