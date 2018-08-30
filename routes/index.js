@@ -9,8 +9,8 @@ var products = JSON.parse(fs.readFileSync('./data/products.json', 'utf8'));
 router.get('/', function (req, res, next) {
   var productId = products && products[0].id;
 
-  res.render('index', 
-  { 
+  res.render('index',
+  {
     title: 'NodeJS Shopping Cart',
     products: products
   }
@@ -28,20 +28,6 @@ router.get('/add/:id', function(req, res, next) {
   req.session.cart = cart;
   res.redirect('/');
   inline();
-});
-
-router.get('/cart', function(req, res, next) {
-  if (!req.session.cart) {
-    return res.render('cart', {
-      products: null
-    });
-  }
-  var cart = new Cart(req.session.cart);
-  res.render('cart', {
-    title: 'NodeJS Shopping Cart',
-    products: cart.getItems(),
-    totalPrice: cart.totalPrice
-  });
 });
 
 router.get('/remove/:id', function(req, res, next) {
