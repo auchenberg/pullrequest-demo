@@ -2,5 +2,5 @@
     "appService.zipIgnorePattern": [
         "node_modules{,/**}"
     ],
-    "editor.insertSpaces": false
+    "editor.insertSpaces": true
 }
