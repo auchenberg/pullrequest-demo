@@ -31,22 +31,22 @@ app.use(session({
 app.use(express.static(path.join(__dirname, 'public')));
 
 // res.locals is an object passed to hbs engine
-app.use(function(req, res, next) {
-    res.locals.session = req.session;
-    next();
+app.use(function (req, res, next) {
+  res.locals.session = req.session;
+  next();
 });
 
 app.use('/', index);
 
 // catch 404 and forward to error handler
-app.use(function(req, res, next) {
+app.use(function (req, res, next) {
   var err = new Error('Not Found');
   err.status = 404;
   next(err);
 });
 
 // error handler
-app.use(function(err, req, res, next) {
+app.use(function (err, req, res, next) {
   // set locals, only providing error in development
   res.locals.message = err.message;
   res.locals.error = req.app.get('env') === 'development' ? err : {};
