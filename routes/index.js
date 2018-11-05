@@ -9,19 +9,19 @@ var products = JSON.parse(fs.readFileSync('./data/products.json', 'utf8'));
 router.get('/', function (_req, res, _next) {
   var productId = products && products[0].id;
 
-  res.render('index', 
-  { 
-    title: 'NodeJS Shopping Cart',
-    products: products
-  }
+  res.render('index',
+    {
+      title: 'NodeJS Shopping Cart',
+      products: products
+    }
   );
 });
 
-router.get('/add/:id', function(req, res, _next) {
+router.get('/add/:id', function (req, res, _next) {
 
   var productId = req.params.id;
   var cart = new Cart(req.session.cart ? req.session.cart : {});
-  var product = products.filter(function(item) {
+  var product = products.filter(function (item) {
     return item.id === productId;
   });
   cart.add(product[0], productId);
@@ -30,7 +30,7 @@ router.get('/add/:id', function(req, res, _next) {
   inline();
 });
 
-router.get('/cart', function(req, res, _next) {
+router.get('/cart', function (req, res, _next) {
   if (!req.session.cart) {
     return res.render('cart', {
       products: null
@@ -44,7 +44,7 @@ router.get('/cart', function(req, res, _next) {
   });
 });
 
-router.get('/remove/:id', function(req, res, _next) {
+router.get('/remove/:id', function (req, res, _next) {
   var productId = req.params.id;
   var cart = new Cart(req.session.cart ? req.session.cart : {});
 
