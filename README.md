@@ -1,3 +1,3 @@
 # nodejs-shopping-cart
 
-Buy some fruit, it's citrus season
+Buy some fruit, it's *citrus* season
