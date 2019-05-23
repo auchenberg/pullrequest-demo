@@ -24,6 +24,7 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
+ape.use(console.log());
 app.use(session({
   secret: 'secret',
   resave: false,
