@@ -46,13 +46,5 @@ router.get('/cart', function(req, res, next) {
   });
 });
 
-router.get('/remove/:id', function(req, res, next) {
-  var productId = req.params.id;
-  var cart = new Cart(req.session.cart ? req.session.cart : {});
-
-  cart.remove(productId);
-  req.session.cart = cart;
-  res.redirect('/cart');
-});
 
 module.exports = router;
