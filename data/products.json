@@ -22,5 +22,11 @@
     "title": "Papayas",
     "description": "Papayas are <span class=\"label label-info\">50 CHF each</span>, but are <span class=\"label label-warning\">available as 3 for the price of 2</span>",
     "price": 100
+  },
+  {
+    "id": 4,
+    "title": "Portobello Mushrooms",
+    "description": "Portobello Mushrooms are <span class=\"label label-info\">50 CHF each</span>",
+    "price": 50
   }
 ]
