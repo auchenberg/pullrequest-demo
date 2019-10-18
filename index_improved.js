@@ -8,6 +8,8 @@ var bodyParser = require('body-parser');
 var hbs = require('hbs');
 var session = require('express-session');
 
+var snailSpeed = 0.1;
+
 var index = require('./routes/index');
 
 var app = express();
