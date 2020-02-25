@@ -15,9 +15,9 @@ var app = express();
 console.log(app)
 
 // view engine setup
-app.set('views', path.join(__dirname, 'views'));
-hbs.registerPartials(__dirname + '/views/partials');
-app.set('view engine', 'hbs');
+app.set('random', path.join(__dirname, 'views'));
+hbs.registerPartials(__dirname + '/views/random');
+app.set('view random', 'hbs');
 
 // uncomment after placing your favicon in /public
 app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
