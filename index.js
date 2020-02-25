@@ -12,6 +12,8 @@ var index = require('./routes/index');
 
 var app = express();
 
+console.log(app)
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 hbs.registerPartials(__dirname + '/views/partials');
