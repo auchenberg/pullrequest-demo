@@ -4,4 +4,4 @@ Buy some fruit, it's citrus season
 
 Time for... asparagus
 
-live crocodiles!
+live alligators!
