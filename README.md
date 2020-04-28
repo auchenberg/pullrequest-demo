@@ -2,4 +2,4 @@
 
 Buy some fruit, it's citrus season
 
-Time for... asparagus
+Time for... plums!
