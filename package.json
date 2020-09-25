@@ -4,9 +4,11 @@
   "author": "George Tsopouridis",
   "email": "gtsopour@gmail.com",
   "private": false,
+
+
+  
   "scripts": {
     "start": "node ./bin/www",
-
     "start_azure_debug": "if [[ ${APPSVC_TUNNEL_PORT} != \"\" ]]; then node --inspect=0.0.0.0:$APPSVC_TUNNEL_PORT ./bin/www; else npm run start; fi"
   },
   "description": "Shopping cart utility",
