@@ -2,6 +2,6 @@
 
 Buy some fruit, it's citrus season
 
-Time for... plums!
+Time for... choyote!
 
 Is it time for squash yet?
